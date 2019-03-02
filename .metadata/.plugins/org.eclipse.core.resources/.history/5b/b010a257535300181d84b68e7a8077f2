@@ -1,0 +1,7 @@
+package com.bjpowernode.service.impl;
+
+import com.bjpowernode.service.UserService;
+
+public class UserServiceImpl implements UserService {
+
+}

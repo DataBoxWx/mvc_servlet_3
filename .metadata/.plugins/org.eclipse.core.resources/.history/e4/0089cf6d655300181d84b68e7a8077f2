@@ -1,0 +1,56 @@
+package com.bjpowernode.controller;
+
+import java.io.IOException;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.bjpowernode.service.StudentService;
+import com.bjpowernode.service.impl.StudentServiceImpl;
+import com.bjpowernode.service.impl.UserServiceImpl;
+import com.bjpowernode.util.ServiceFactory;
+
+public class StudentController extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		StudentService studentService = (StudentService) ServiceFactory.getProxy(new StudentServiceImpl());
+		String path = request.getServletPath();
+		if("/student/list.do".equals(path)){
+			studentList(request,response,studentService);
+		}else if ("/student/add.do".equals(path)) {
+			studentAdd(request,response,studentService);
+		}else if ("/student/delete.do".equals(path)) {
+			studentDelete(request,response,studentService);
+		}else if ("/student/edit.do".equals(path)) {
+			studentEdit(request,response,studentService);
+		}else if ("/student/update.do".equals(path)) {
+			studentUpdate(request,response,studentService);
+		}
+	}
+	private void studentUpdate(HttpServletRequest request, HttpServletResponse response, StudentService studentService) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void studentEdit(HttpServletRequest request, HttpServletResponse response, StudentService studentService) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void studentDelete(HttpServletRequest request, HttpServletResponse response, StudentService studentService) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void studentAdd(HttpServletRequest request, HttpServletResponse response, StudentService studentService) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void studentList(HttpServletRequest request, HttpServletResponse response, StudentService studentService) {
+		Map<String, Object> map = studentService.getAll();	
+	}
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		this.doGet(request, response);
+	}
+}

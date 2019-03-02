@@ -1,0 +1,13 @@
+package com.bjpowernode.service.impl;
+
+import com.bjpowernode.service.TaccountService;
+
+public class TaccountServiceImple implements TaccountService {
+
+	@Override
+	public void TaccountService(String outaccount, String inaccount, String zzbalance) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,22 @@
+package com.bjpowernode.test;
+
+public class Ls implements GiveFlower{
+	Zs zs;
+	
+	public Ls(Zs zs) {
+		super();
+		this.zs = zs;
+	}
+
+	@Override
+	public void giveflower() {
+		System.out.println("我是送花使者");
+		System.out.println("我是送花使者");
+		zs.giveflower();
+		System.out.println("我是送花使者");
+		System.out.println("我是送花使者");
+		
+		
+	}
+
+}

@@ -1,0 +1,50 @@
+package com.bjpowernode.service.impl;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.bjpowernode.common.Jutil;
+import com.bjpowernode.dao.impl.TaccountDaoImpl;
+import com.bjpowernode.service.TaccountService;
+
+public class TaccountServiceImpl implements TaccountService{
+
+	@Override
+	public void taccount(String outaccount, String inaccount, String balanceStr) {
+		int balance = Integer.valueOf(balanceStr);
+		TaccountDaoImpl dao = new TaccountDaoImpl();
+		Connection conn = null;
+		try {
+			conn = Jutil.getConnection();
+			conn.setAutoCommit(false);
+			System.out.println("service:"+conn);
+			
+			if(dao.checkAccount(outaccount){
+				if(dao.checkAccount(inaccount)){
+					int outbalance = dao.getBalanceByAccount(outaccount);
+					if(outbalance >= balance){
+							dao.updateBalanceByAccount(outaccount, outbalance-balance);
+							dao.updateBalanceByAccount(inaccount, balance+dao.getBalanceByAccount(inaccount));
+						}
+				}
+			}
+			
+			conn.commit();
+			
+		} catch (Exception e) {
+			try {
+				conn.rollback();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+		}finally {
+			Jutil.close1(conn, null, null);
+		}
+		
+		
+		
+	}
+
+}

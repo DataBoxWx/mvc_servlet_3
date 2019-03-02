@@ -1,0 +1,34 @@
+package com.bjpowernode.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.bjpowernode.dao.impl.TaccountDaoImpl;
+
+public class TaccountController extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String outaccount = request.getParameter("outaccount");
+		String inaccount = request.getParameter("inaccount");
+		String balanceStr = request.getParameter("balance");
+		int balance = Integer.valueOf(balanceStr);
+		TaccountDaoImpl dao = new TaccountDaoImpl();
+		if(dao.checkAccount(outaccount)){
+			int outbalance = dao.getBalanceByAccount(outaccount);
+			if(outbalance >= balance){
+				if(dao.checkAccount(inaccount)){
+					dao.updateBalanceByAccount(outaccount, outbalance-balance);
+					dao.updateBalanceByAccount(inaccount, balance+dao.getBalanceByAccount(inaccount));
+				}
+			}
+		}
+	}
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		this.doGet(request, response);
+	}
+}

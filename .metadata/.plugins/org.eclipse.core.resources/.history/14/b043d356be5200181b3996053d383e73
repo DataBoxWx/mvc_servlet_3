@@ -1,0 +1,8 @@
+package com.bjpowernode.crud.util;
+
+public class PageUtil {
+	private String pageSize;
+	private String pageNu;
+	private String pageCount;
+	private String Total;
+}

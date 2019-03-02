@@ -1,0 +1,73 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 	request.getServerPort() + request.getContextPath() + "/";
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<base href="<%=basePath%>">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<title>Insert title here</title>
+<style type="text/css">
+	td{text-align: center}
+</style>
+<script type="text/javascript">
+	$(function(){
+		stuList();
+		function stuList(){
+			$("#tbody").html("");
+			$.post(
+				"student/list.do",		
+			)
+		}
+		
+		
+	})
+</script>
+
+</head>
+<body>
+	<h3 align="center">学生信息管理系统</h3><br/>
+	<div style="margin-left: 300px">欢迎您：${username}</div><hr>
+	<table border="1" align="center" width="60%" cellpadding="8">
+		<thead>
+			<tr>
+				<td style="text-align: left" colspan="5">
+					<button id="addBtn">添加学员</button>
+				</td>
+			</tr>
+			<tr>
+				<td>编号</td>
+				<td>ID</td>
+				<td>姓名</td>
+				<td>年龄</td>
+				<td>操作</td>
+			</tr>
+		</thead>
+		<tbody id ="tbody">
+		
+		</tbody>
+	</table>
+	<table border="1" align="center" width="60%" cellpadding="8">
+		<tr>
+			<td>
+				&共<span></span>条&&nbsp;&nbsp;&nbsp;&nbsp;
+				&第<span></span>页&&nbsp;&nbsp;&nbsp;&nbsp;
+				  &<span></span>条&&nbsp;&nbsp;&nbsp;&nbsp;
+				&共<span></span>页&
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="javascript:viod(0)" id="fristPage">首页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="javascript:viod(0)" id="nextPage">下一页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="javascript:viod(0)" id="proviewsPage">上一页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="javascript:viod(0)" id="lastPage">尾页</a>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

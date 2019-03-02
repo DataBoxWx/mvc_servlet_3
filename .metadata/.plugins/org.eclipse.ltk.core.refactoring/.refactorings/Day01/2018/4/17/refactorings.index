@@ -1,0 +1,5 @@
+1524542016424	Extract local variable 'read'
+1524542060704	Extract local variable 'rootElement'
+1524542154251	Extract local variable 'elements'
+1524542379858	Extract local variable 'elements2'
+1524549721253	Extract local variable 'selectSingleNode'

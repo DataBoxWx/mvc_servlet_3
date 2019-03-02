@@ -1,0 +1,15 @@
+package com.bjpowernode.crud.service;
+
+import java.util.List;
+
+import com.bjpowernode.crud.domain.Students;
+
+public interface StudentService {
+
+	List<Students> getAll();
+
+	void addStudent(Students stu);
+
+	Students getStudentById(String id);
+
+}

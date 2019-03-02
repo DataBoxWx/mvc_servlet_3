@@ -1,0 +1,7 @@
+package com.bjpowernode.crud.service.impl;
+
+import com.bjpowernode.crud.service.UserService;
+
+public class UserServiceImpl implements UserService {
+
+}

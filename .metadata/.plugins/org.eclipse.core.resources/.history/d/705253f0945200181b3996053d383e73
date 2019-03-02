@@ -1,0 +1,24 @@
+package com.bjpowernode.crud.service.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.bjpowernode.crud.dao.StudentDao;
+import com.bjpowernode.crud.dao.impl.StudentDaoImpl;
+import com.bjpowernode.crud.domain.Students;
+import com.bjpowernode.crud.service.StudentService;
+import com.bjpowernode.crud.util.Jutil;
+
+public class StudentServiceImpl implements StudentService {
+	private StudentDao studentdao = new StudentDaoImpl();
+	@Override
+	public List<Students> getAll() {
+		List<Students> slist = studentdao.getAll();
+		return slist;
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.bjpowernode.test;
+
+public interface UserService {
+	public abstract void save();
+	public abstract void delete();
+	public abstract void update();
+	public abstract void select();
+}

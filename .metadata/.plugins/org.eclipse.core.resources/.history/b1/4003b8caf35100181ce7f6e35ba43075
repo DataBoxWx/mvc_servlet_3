@@ -1,0 +1,25 @@
+package com.bjpowernode.dao.impl;
+
+import com.bjpowernode.dao.TaccountDao;
+
+public class TaccountDaoImpl implements TaccountDao {
+
+	@Override
+	public Boolean checkAccount(String account) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getBalanceByAccount(String account) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void updateBalanceByAccount(String account, String balance) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

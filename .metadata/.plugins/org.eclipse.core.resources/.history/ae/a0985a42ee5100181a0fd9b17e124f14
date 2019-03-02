@@ -1,0 +1,12 @@
+package com.bjpowernode.test;
+
+public class Test1 {
+
+	public static void main(String[] args) {
+		Zs zs = new Zs();
+		Ls ls = new Ls(zs);
+		ls.giveflower();
+
+	}
+
+}

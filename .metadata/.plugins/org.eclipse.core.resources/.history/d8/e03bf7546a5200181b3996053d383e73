@@ -1,0 +1,7 @@
+package com.bjpowernode.crud.dao.impl;
+
+import com.bjpowernode.crud.dao.UserDao;
+
+public class UserDaoImpl implements UserDao {
+
+}

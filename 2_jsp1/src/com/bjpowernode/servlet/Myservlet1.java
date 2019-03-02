@@ -1,0 +1,26 @@
+package com.bjpowernode.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class Myservlet1 extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("进入servlet1");
+		String str1 = request.getParameter("str1");
+		String str2 = request.getParameter("str2");
+		System.out.println(str1);
+		System.out.println(str2);
+		PrintWriter out = response.getWriter();
+		out.print("112233");
+	}
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+}

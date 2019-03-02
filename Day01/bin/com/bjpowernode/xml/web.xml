@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app SYSTEM "web-app_2_3.dtd">
+<web-app>
+	<servlet>
+		<servlet-name>百度</servlet-name>
+		<servlet-class>com.bjpowernode.servlet.MyServlet1</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>百度</servlet-name>
+		<url-pattern>http://www.baidu.com</url-pattern>
+	</servlet-mapping>
+</web-app>

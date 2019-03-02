@@ -1,0 +1,37 @@
+package com.bjpowernode.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.bjpowernode.dao.impl.TaccountDaoImpl;
+import com.bjpowernode.service.TaccountService;
+import com.bjpowernode.service.impl.TaccountServiceImpl;
+import com.bjpowernode.service.impl.TaccountServiceProxy;
+import com.bjpowernode.util.TransactionInvocationHandler;
+
+public class TaccountController extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String outaccount = request.getParameter("outaccount");
+		String inaccount = request.getParameter("inaccount");
+		String balanceStr = request.getParameter("balance");
+		/*TaccountServiceImpl tsi = new TaccountServiceImpl();
+		TaccountService pro = new TaccountServiceProxy(tsi);
+		tsi.taccount(outaccount, inaccount, balanceStr);*/
+		
+		TaccountServiceImpl tsi = new TaccountServiceImpl();
+		TransactionInvocationHandler  tmp = new TransactionInvocationHandler(tsi);
+		TaccountService ts = (TaccountService) tmp.getProxy();
+		ts.taccount(outaccount, inaccount, balanceStr);
+		
+		response.sendRedirect(request.getContextPath() + "/continuetransfer.jsp");
+	}
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		this.doGet(request, response);
+	}
+}

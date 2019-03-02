@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="JS.js"></script>
+    <title></title>
+    <script>
+        var photo= document.getElementsByTagName("img");
+        function showImg(){
+            if(photo[0].width <300){
+                window.setTimeout("test1()",2);
+            }else{
+                document.getElementById("show").disabled = true;
+                document.getElementById("hide").disabled = false;
+            }
+        }
+        function test1(){
+
+            photo[0].width += 3;
+            showImg();
+        }
+        function hideImg(){
+            if(photo[0].width > 0){
+                window.setTimeout("test2()",2);
+            }else{
+                document.getElementById("show").disabled = false;
+                document.getElementById("hide").disabled = true;
+            }
+        }
+        function test2(){
+            photo[0].width -= 3;
+            hideImg();
+        }
+
+    </script>
+</head>
+<body>
+<input type="button" id="show" value="显示图片" onclick="showImg()">
+<input type="button" id="hide" value="隐藏图片" onclick="hideImg()" disabled>
+<hr>
+<img src="./img/010.jpg" id="img" width="0">
+
+</body>
+</html>

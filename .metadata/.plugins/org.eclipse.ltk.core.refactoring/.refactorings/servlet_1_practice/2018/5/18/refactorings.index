@@ -1,0 +1,9 @@
+1525226989318	Rename compilation unit 'myservlet1.java'
+1525227005611	Rename compilation unit 'myservlet5_1.java'
+1525227463589	Extract local variable 'out'
+1525230440268	Copy compilation unit
+1525230720796	Extract local variable 'aa'
+1525230854191	Extract local variable 'method'
+1525230903714	Extract local variable 'requestURI'
+1525230915203	Extract local variable 'requestURL'
+1525246860890	Copy folder

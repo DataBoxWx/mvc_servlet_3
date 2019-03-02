@@ -1,0 +1,26 @@
+1525741202317	Delete element
+1525741216274	Delete element
+1525834807745	Delete element
+1525834816715	Delete element
+1525835738337	Extract local variable 'obj'
+1525846155444	Extract local variable 'path'
+1525846287804	Extract local variable 'username'
+1525846533992	Delete elements
+1525846686511	Extract local variable 'username'
+1525846700934	Extract local variable 'password'
+1525846863815	Extract local variable 'proxy'
+1525849878765	Copy compilation unit
+1525850784247	Extract local variable 'userService'
+1525850853348	Extract local variable 'path'
+1525854952478	Extract local variable 'map'
+1525854971574	Extract local variable 'object'
+1525856814017	Extract local variable 'name'
+1525856824050	Extract local variable 'age'
+1525861834251	Copy file
+1525862176753	Extract local variable 'id'
+1525862912291	Extract local variable 'out'
+1525863656252	Extract local variable 'id'
+1525863667190	Extract local variable 'name'
+1525863682380	Extract local variable 'ageStr'
+1525915254559	Extract local variable 'pageNum'
+1525915879642	Extract local variable 'countStr'

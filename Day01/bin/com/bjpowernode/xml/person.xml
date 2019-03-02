@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Person>
+	<p1>
+		<id>A0001&lt;</id>
+		<name>zs</name>
+		<age>23</age>
+	</p1>
+	<p2>
+		<id>&gt;"A0002"</id>
+		<name>ss</name>
+		<age>25</age>
+	</p2>
+	<p3>
+		<id>A0003&amp;</id>
+		<name>zz</name>
+		<age>13</age>
+	</p3>
+	<p4>
+		<id>&apos;A004&apos;</id>
+		<name>ww</name>
+		<age>01</age>
+	</p4>
+</Person>

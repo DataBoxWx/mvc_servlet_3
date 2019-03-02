@@ -1,0 +1,40 @@
+package com.bjpowernode.test;
+
+
+public class UserServiceProxy implements UserService {
+	private UserServiceImpl usi ;
+	
+	public UserServiceProxy(UserServiceImpl usi) {
+		super();
+		this.usi = usi;
+	}
+
+	@Override
+	public void save() {
+		System.out.println("完成增加");
+		System.out.println("增加");
+		System.out.println("结束增加");
+	}
+
+	@Override
+	public void delete() {
+		System.out.println("完成删除");
+		System.out.println("删除");
+		System.out.println("结束删除");
+	}
+
+	@Override
+	public void update() {
+		System.out.println("完成更新");
+		System.out.println("更新");
+		System.out.println("结束更新");
+	}
+
+	@Override
+	public void select() {
+		System.out.println("完成查询");
+		System.out.println("查询");
+		System.out.println("结束查询");
+	}
+
+}

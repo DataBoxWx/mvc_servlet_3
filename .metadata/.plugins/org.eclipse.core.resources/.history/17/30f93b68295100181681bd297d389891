@@ -1,0 +1,7 @@
+package com.bjpowernode.controller;
+
+public class TaccountController {
+	public static void main(String[] args) {
+		
+	}
+}

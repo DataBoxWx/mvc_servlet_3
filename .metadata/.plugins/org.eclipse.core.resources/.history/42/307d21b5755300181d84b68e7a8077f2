@@ -1,0 +1,13 @@
+package com.bjpowernode.dao;
+
+import java.util.List;
+
+import com.bjpowernode.domain.Students;
+
+public interface StudentDao {
+
+	List<Students> getAll();
+
+	void addStu(String name, int age);
+
+}

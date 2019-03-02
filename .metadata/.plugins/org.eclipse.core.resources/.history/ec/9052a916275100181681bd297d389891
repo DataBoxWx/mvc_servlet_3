@@ -1,0 +1,5 @@
+package com.bjpowernode.dao.impl;
+
+public class TaccountDaoImpl {
+
+}

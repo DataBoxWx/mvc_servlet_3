@@ -1,0 +1,8 @@
+package com.bjpowernode.util;
+
+public class PageNumber {
+	private int pageCount;
+	private int pageNum;
+	private int pageSize;
+	private int pageSum;
+}

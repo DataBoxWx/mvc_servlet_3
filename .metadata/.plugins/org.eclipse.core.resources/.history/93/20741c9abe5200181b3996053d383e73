@@ -1,0 +1,32 @@
+package com.bjpowernode.crud.util;
+
+public class PageUtil {
+	private String pageSize;
+	private String pageNu;
+	private String pageCount;
+	private String Total;
+	public String getPageSize() {
+		return pageSize;
+	}
+	public void setPageSize(String pageSize) {
+		this.pageSize = pageSize;
+	}
+	public String getPageNu() {
+		return pageNu;
+	}
+	public void setPageNu(String pageNu) {
+		this.pageNu = pageNu;
+	}
+	public String getPageCount() {
+		return pageCount;
+	}
+	public void setPageCount(String pageCount) {
+		this.pageCount = pageCount;
+	}
+	public String getTotal() {
+		return Total;
+	}
+	public void setTotal(String total) {
+		Total = total;
+	}
+}

@@ -1,0 +1,76 @@
+ package com.bjpowernode.crud.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.bjpowernode.crud.domain.Students;
+import com.bjpowernode.crud.service.StudentService;
+import com.bjpowernode.crud.service.impl.StudentServiceImpl;
+import com.bjpowernode.crud.util.ServiceFactory;
+import com.sun.org.apache.bcel.internal.generic.NEW;
+
+public class StudentController extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html;charset=utf-8");
+		StudentService studentService  = (StudentService) ServiceFactory.getService(new StudentServiceImpl());
+		String path = request.getServletPath();
+		if("/controller/list.do".equals(path)){
+			list(request,response,studentService);
+		}else if("/controller/save.do".equals(path)){
+			save(request,response,studentService);
+		}else if("/controller/delete.do".equals(path)){
+			delete(request,response,studentService);
+		}else if("/controller/update.do".equals(path)){
+			update(request,response,studentService);
+		}
+	}
+	private void update(HttpServletRequest request, HttpServletResponse response, StudentService studentService) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void delete(HttpServletRequest request, HttpServletResponse response, StudentService studentService) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void save(HttpServletRequest request, HttpServletResponse response, StudentService studentService) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void list(HttpServletRequest request, HttpServletResponse response, StudentService studentService) throws IOException {
+		System.out.println("进入学生列表操作");
+		List<Students> slist = studentService.getAll();
+		StringBuffer buffer = new StringBuffer();
+		//{"slist":[{"id":"?","name":"?","age":?}]}
+		buffer.append("{\"slist\":[");
+		for(int i = 0; i<= slist.size();i++){
+			Students stu = slist.get(i);
+			buffer.append("{\"id\":\"");
+			buffer.append(stu.getId());
+			buffer.append("\",\"name\":\"");
+			buffer.append(stu.getName());
+			buffer.append("\",\"age\":");
+			buffer.append(stu.getAge());
+			buffer.append("}");
+			if( i<= slist.size()){
+				buffer.append(",");
+			}
+		}
+		buffer.append("]}");
+		System.out.println(buffer);
+		PrintWriter out = response.getWriter();
+		out.print(buffer.toString());
+		out.close();
+	}
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		this.doGet(request, response);
+	}
+}

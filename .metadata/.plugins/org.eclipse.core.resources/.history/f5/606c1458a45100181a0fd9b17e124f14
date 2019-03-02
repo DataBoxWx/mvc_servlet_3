@@ -1,0 +1,10 @@
+package com.bjpowernode.dao;
+
+public interface TaccountDao {
+	//查看账户
+	public abstract Boolean checkAccount(String account);
+	//查看余额
+	public abstract int getBalanceByAccount(String account);
+	//更新金额
+	public abstract void updateBalanceByAccount(String account,int balance);
+}

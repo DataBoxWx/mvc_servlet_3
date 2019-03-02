@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>zzz</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <!-- <filter>
+  	<filter-name>filter1</filter-name>
+  	<filter-class>com.bjpowernode.filter.Filter1</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>filter1</filter-name>
+  	<url-pattern>/myServlet1.do</url-pattern>
+  </filter-mapping> -->
+  
+  <filter>
+  	<filter-name>encodingFilter</filter-name>
+  	<filter-class>com.bjpowernode.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>encodingFilter</filter-name>
+  	<url-pattern>/myServlet1.do</url-pattern>
+  	<url-pattern>/myServlet2.do</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+    <servlet-name>myServlet1</servlet-name>
+    <servlet-class>com.bjpowernode.servlet.MyServlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>myServlet1</servlet-name>
+    <url-pattern>/myServlet1.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>myServlet2</servlet-name>
+    <servlet-class>com.bjpowernode.servlet.MyServlet2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>myServlet2</servlet-name>
+    <url-pattern>/myServlet2.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>myServlet3</servlet-name>
+    <servlet-class>com.bjpowernode.servlet.MyServlet3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>myServlet3</servlet-name>
+    <url-pattern>/myServlet3.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>myServlet4</servlet-name>
+    <servlet-class>com.bjpowernode.servlet.MyServlet4</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>myServlet4</servlet-name>
+    <url-pattern>/myServlet4.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>myServlet5</servlet-name>
+    <servlet-class>com.bjpowernode.servlet.MyServlet5</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>myServlet5</servlet-name>
+    <url-pattern>/myServlet5.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>myServlet6</servlet-name>
+    <servlet-class>com.bjpowernode.servlet.MyServlet6</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>myServlet6</servlet-name>
+    <url-pattern>/myServlet6.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>myServlet7</servlet-name>
+    <servlet-class>com.bjpowernode.servlet.MyServlet7</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>myServlet7</servlet-name>
+    <url-pattern>/myServlet7.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>myServlet8</servlet-name>
+    <servlet-class>com.bjpowernode.servlet.MyServlet8</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>myServlet8</servlet-name>
+    <url-pattern>/myServlet8.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>myServlet9</servlet-name>
+    <servlet-class>com.bjpowernode.servlet.MyServlet9</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>myServlet9</servlet-name>
+    <url-pattern>/myServlet9.do</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

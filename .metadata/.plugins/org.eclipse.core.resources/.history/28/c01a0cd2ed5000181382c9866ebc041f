@@ -1,0 +1,9 @@
+package com.bjpowernode.common;
+
+import java.util.UUID;
+
+public class JuuID {
+	public static UUID getIdd(){
+		return UUID.randomUUID().toString().replaceAll("-", "");
+	}
+}

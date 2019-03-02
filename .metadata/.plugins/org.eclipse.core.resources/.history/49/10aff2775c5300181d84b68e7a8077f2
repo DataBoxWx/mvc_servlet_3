@@ -1,0 +1,11 @@
+package com.bjpowernode.service;
+
+import java.util.Map;
+
+public interface UserService {
+
+	Boolean Flag(String username,String password);
+
+	Map<String, Object> getAll();
+
+}

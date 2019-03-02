@@ -1,0 +1,39 @@
+1524569545330	Delete element
+1524569762891	Delete element
+1524569790690	Delete element
+1524569830625	Copy file
+1524570162898	Delete element
+1524570272384	Rename package 'servlet_1_practice'
+1524571353837	Delete element
+1524571950282	Extract local variable 'connection'
+1524717826586	Move file
+1524717834883	Move file
+1524725394781	Delete element
+1524725459787	Delete element
+1524726049233	Delete element
+1524726189824	Delete element
+1524732837496	Copy compilation unit
+1524736812865	Extract local variable 'writer'
+1524746560370	Extract local variable 'writer'
+1524746897409	Extract local variable 'parameter'
+1524748055913	Extract local variable 'writer'
+1524795599076	Copy file
+1524795624892	Delete element
+1524798446906	Extract local variable 'out'
+1524808244757	Copy file
+1524808254137	Delete element
+1524808750456	Extract local variable 'req'
+1524811107784	Copy compilation unit
+1524811113042	Copy compilation unit
+1524811118959	Copy compilation unit
+1524811133354	Copy compilation unit
+1524814989811	Extract local variable 'application'
+1524815229239	Extract local variable 'str'
+1524815455520	Extract local variable 'value'
+1524815992459	Extract local variable 'out'
+1524829825318	Rename package 'com.bjpowernode.homework'
+1524833335738	Extract local variable 'out'
+1524887320477	Copy compilation unit
+1524900286220	Copy compilation unit
+1524900448339	Extract local variable 'cookies'
+1524900530702	Extract local variable 'out'

@@ -1,0 +1,15 @@
+1525417058368	Copy compilation unit
+1525426890734	Extract local variable 'out'
+1525442372452	Extract local variable 'str1'
+1525442409685	Extract local variable 'str2'
+1525484468903	Move 'ajax1.jsp' to 'ajax'
+1525484929317	Copy compilation unit
+1525488685659	Copy compilation unit
+1525488771926	Copy file
+1525491133999	Copy compilation unit
+1525491165683	Copy file
+1525503063791	Copy compilation unit
+1525503121661	Copy compilation unit
+1525504415350	Copy file
+1525512563347	Copy compilation unit
+1525512760481	Extract local variable 'pid'

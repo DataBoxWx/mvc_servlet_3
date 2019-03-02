@@ -1,0 +1,22 @@
+package com.bjpowernode.crud.dao;
+
+import java.util.List;
+import java.util.Map;
+
+import com.bjpowernode.crud.domain.Students;
+
+public interface StudentDao {
+
+	Map<String,Object> getAll(String pageNu);
+
+	void addStudent(Students stu);
+
+	Students getStudentById(String id);
+
+	void updateStudent(Students stu);
+
+	void deleteStudent(String id);
+
+	int getNumber();
+
+}

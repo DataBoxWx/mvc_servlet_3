@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="3;url=/jsp_1_practice/login.html">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function tz(){
+		window.setInterval("js()",1000);
+	}
+	function js(){
+		document.getElementById("span").innerHTML = document.getElementById("span").innerHTML - 1
+	}
+</script>
+</head>
+<body onload ="tz()">
+	错误的用户名或密码,<span id= “span”>3</span>秒种后自动跳转到登陆界面
+</body>
+</html>

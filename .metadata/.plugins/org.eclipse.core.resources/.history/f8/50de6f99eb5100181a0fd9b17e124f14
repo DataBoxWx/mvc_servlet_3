@@ -1,0 +1,10 @@
+package com.bjpowernode.util;
+
+import com.bjpowernode.service.impl.TaccountServiceImpl;
+
+public class TaccountServiceFactory {
+	public Object name(Object service) {
+		return	new TransactionInvocationHandler(service).getProxy();
+	}
+	
+}

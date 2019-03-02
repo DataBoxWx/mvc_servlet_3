@@ -1,0 +1,11 @@
+package com.bjpowernode.test;
+
+public class Zs implements GiveFlower{
+
+	@Override
+	public void giveflower() {
+		System.out.println("我要送花给董小姐");
+		
+	}
+	
+}

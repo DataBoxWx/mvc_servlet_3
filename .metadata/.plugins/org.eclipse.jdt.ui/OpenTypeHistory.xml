@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=crud_1/src&lt;com.bjpowernode.crud.service{UserService.java[UserService" modifiers="513" timestamp="1525747791674"/>
+<typeInfo handle="=crud_1/src&lt;com.bjpowernode.crud.dao{UserDao.java[UserDao" modifiers="513" timestamp="1525747732901"/>
+<typeInfo handle="=crud_1/src&lt;com.bjpowernode.crud.dao{StudentDao.java[StudentDao" modifiers="513" timestamp="1525784310676"/>
+<typeInfo handle="=crud_1/src&lt;com.bjpowernode.crud.service{StudentService.java[StudentService" modifiers="513" timestamp="1525782189926"/>
+<typeInfo handle="=mvc_2/src&lt;com.bjpowernode.service{UserService.java[UserService" modifiers="513" timestamp="1525851724929"/>
+<typeInfo handle="=mvc_2/C:\/Program Files\/Java\/jdk1.8.0_101\/jre\/lib\/rt.jar&lt;java.nio.file.attribute(UserDefinedFileAttributeView.class[UserDefinedFileAttributeView" modifiers="1537" timestamp="1520843272189"/>
+<typeInfo handle="=mvc_2/src&lt;com.bjpowernode.dao{UserDao.java[UserDao" modifiers="513" timestamp="1525847805228"/>
+<typeInfo handle="=mvc_2/src&lt;com.bjpowernode.service{StudentService.java[StudentService" modifiers="513" timestamp="1525915911982"/>
+<typeInfo handle="=mvc_2/src&lt;com.bjpowernode.dao{StudentDao.java[StudentDao" modifiers="513" timestamp="1525917640471"/>
+</typeInfoHistroy>

@@ -1,0 +1,9 @@
+package com.bjpowernode.domain;
+
+public class City {
+	private static int id;
+	private static String name;
+	private static int pid;
+	
+	
+}

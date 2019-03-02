@@ -1,0 +1,8 @@
+1524980254514	Move 'index.html' to 'WebContent'
+1524980259187	Move 'login.html' to 'WebContent'
+1524980261258	Move 'register.html' to 'WebContent'
+1524980641395	Extract local variable 'user'
+1524981518152	Rename resource 'file.html'
+1524982879401	Extract local variable 'out'
+1524984453131	Extract local variable 'application'
+1524986057284	Extract local variable 'id'

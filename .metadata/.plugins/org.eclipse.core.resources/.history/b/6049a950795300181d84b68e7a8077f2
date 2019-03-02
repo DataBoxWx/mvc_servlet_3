@@ -1,0 +1,38 @@
+package com.bjpowernode.service.impl;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.bjpowernode.dao.StudentDao;
+import com.bjpowernode.dao.impl.StudentDaoImpl;
+import com.bjpowernode.domain.Students;
+import com.bjpowernode.service.StudentService;
+
+public class StudentServiceImpl implements StudentService {
+	private StudentDao studentDao = new StudentDaoImpl();
+	@Override
+	public Map<String, Object> getAll() {
+		List<Students> sList= studentDao.getAll();
+		Map<String, Object> map =new HashMap<>();
+		map.put("slist", sList);
+		return map;
+	}
+	@Override
+	public void addStu(String name, String ageStr) {
+		int age = Integer.valueOf(ageStr);
+		studentDao.addStu(name,age);
+	}
+	@Override
+	public Students getStu(String id) {
+		Students stu = studentDao.getStu(id);
+		return stu;
+	}
+	@Override
+	public void update(String id, String name, String ageStr) {
+		int age = Integer.valueOf(ageStr);
+		studentDao.update(id,name,age);
+		
+	}
+
+}

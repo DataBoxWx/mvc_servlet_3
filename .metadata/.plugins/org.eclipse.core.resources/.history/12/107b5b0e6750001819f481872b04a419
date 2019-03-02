@@ -1,0 +1,58 @@
+package com.bjpowernode.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.bjpowernode.common.Jutil;
+
+/**
+ * Servlet implementation class Login
+ */
+public class UserNameJudge extends HttpServlet {
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String username = request.getParameter("username");
+		PrintWriter out = response.getWriter();
+		System.out.println(username);
+		Connection conn = null;
+		PreparedStatement ps = null;
+		ResultSet res = null;
+		String sql = "select count(*) from tbl_user where username=? ";
+		try {
+			conn = Jutil.getConnection();
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, username);
+			res = ps.executeQuery();
+			while(res.next()){
+				int i = res.getInt(1);
+				if(i == 1){
+					out.print("right");
+				}else {
+					out.print("wrong");
+				}
+			}
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		this.doGet(request, response);
+	}
+
+}

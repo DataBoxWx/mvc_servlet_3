@@ -1,0 +1,11 @@
+package com.bjpowernode.service;
+
+import java.util.Map;
+
+public interface StudentService {
+
+	Map<String, Object> getAll();
+
+	void addStu(String name, String ageStr);
+
+}

@@ -1,0 +1,5 @@
+package com.bjpowernode.crud.dao;
+
+public interface StudentDao {
+
+}
